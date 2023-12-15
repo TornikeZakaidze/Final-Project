@@ -1,0 +1,40 @@
+.container {
+    @include myContainer;
+}
+
+.header-Rec {
+    height: 50px;
+    width: 100%;
+    @include horizontalCentered;
+    position: fixed;
+
+    .nav-Bar {
+        .tbc-Logo {
+            margin: 0 15px 0 40px;
+            width: 45px;
+            height: 35px;
+        }
+        .nav-Search {
+            margin: 0 40px 0 15px;
+            margin-top: 7px;
+            float: right;
+            @include horizontalCentered;
+            width: 650px;
+            justify-content: space-between;
+            h2 {
+                font-size: 25px;
+                font-family: 'indie flower';
+            }
+            input {
+                resize: none;
+                height: 30px;
+                border-radius: 10px;
+                width: 120px;
+                font-size: 20px;
+                background-color: whitesmoke;
+                border: 2px solid lightgray;
+            }
+        }
+        
+    } 
+}
