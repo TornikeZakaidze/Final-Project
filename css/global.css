@@ -63,21 +63,37 @@ a {
 }
 
 .header-Rec {
-  height: 50px;
+  height: 100px;
   width: 100%;
   display: flex;
   align-items: center;
-  position: fixed;
 }
-.header-Rec .nav-Bar .tbc-Logo {
+.header-Rec .nav-Bar {
+  display: flex;
+  justify-content: space-between;
+}
+.header-Rec .nav-Bar .logo {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
   margin: 0 15px 0 40px;
+  width: 187px;
+  height: 60px;
+}
+.header-Rec .nav-Bar .logo .tbc-Logo {
   width: 45px;
   height: 35px;
+}
+.header-Rec .nav-Bar .logo h1 {
+  font-family: "indie flower";
+  color: black;
+  font-size: 30px;
 }
 .header-Rec .nav-Bar .nav-Search {
   margin: 0 40px 0 15px;
   margin-top: 7px;
-  float: right;
+  right: 0;
   display: flex;
   align-items: center;
   width: 650px;
@@ -86,6 +102,7 @@ a {
 .header-Rec .nav-Bar .nav-Search h2 {
   font-size: 25px;
   font-family: "indie flower";
+  color: black;
 }
 .header-Rec .nav-Bar .nav-Search input {
   resize: none;
@@ -95,4 +112,14 @@ a {
   font-size: 20px;
   background-color: whitesmoke;
   border: 2px solid lightgray;
+}
+
+.footer-Rectangle {
+  width: 100%;
+  height: 200px;
+  background-color: #e6f7e6;
+}
+.footer-Rectangle img {
+  width: 45px;
+  height: 35px;
 }/*# sourceMappingURL=global.css.map */

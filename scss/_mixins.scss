@@ -3,7 +3,15 @@
     width: 100%;
     margin: 0 auto;
 }
-@mixin horizontalCentered {
+@mixin verticalCentered {
     display: flex;
     align-items: center;
+}
+
+
+// styles //
+
+@mixin style1 {
+    font-family: 'indie flower';
+    color: black;
 }

@@ -3,27 +3,40 @@
 }
 
 .header-Rec {
-    height: 50px;
+    height: 100px;
     width: 100%;
-    @include horizontalCentered;
-    position: fixed;
+    @include verticalCentered;
 
     .nav-Bar {
-        .tbc-Logo {
+        display:  flex;
+        justify-content: space-between;
+        .logo {
+            display: flex;
+            flex-direction: column;
+            @include verticalCentered;
             margin: 0 15px 0 40px;
-            width: 45px;
-            height: 35px;
+            width: 187px;
+            height: 60px;
+            .tbc-Logo {
+                width: 45px;
+                height: 35px;
+            }
+            h1 {
+                @include style1;
+                font-size: 30px;
+            }
         }
+        
         .nav-Search {
             margin: 0 40px 0 15px;
             margin-top: 7px;
-            float: right;
-            @include horizontalCentered;
+            right: 0;
+            @include verticalCentered;
             width: 650px;
             justify-content: space-between;
             h2 {
                 font-size: 25px;
-                font-family: 'indie flower';
+                @include style1;
             }
             input {
                 resize: none;
@@ -37,4 +50,22 @@
         }
         
     } 
+}
+
+
+
+
+
+
+.footer-Rectangle {
+    width: 100%;
+    height: 200px;
+    background-color: #e6f7e6;
+    img {
+        width: 45px;
+        height: 35px;
+    }
+
+
+
 }
