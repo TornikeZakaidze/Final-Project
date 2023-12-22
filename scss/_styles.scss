@@ -71,6 +71,7 @@
             width: 200px;
             flex-wrap: wrap;
             justify-content: center;
+            height: 100px;
             img {
                 width: 38px;
                 height: 30px;
@@ -95,12 +96,20 @@
                 margin-top: 6px;
             }
         }
-        .footer-nav {
-            h5 {
-                @include style1;
+        .footer-Nav {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            a {
                 color: $secondary-color;
             }
+            h5 {
+                @include style1;
+                margin-bottom: 10px;
+                display: inline-block;
+            }
         }
+        
     }
 
 

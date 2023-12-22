@@ -135,6 +135,7 @@ a {
   width: 200px;
   flex-wrap: wrap;
   justify-content: center;
+  height: 100px;
 }
 .footer-Rectangle .footer-Text .footer-Logo img {
   width: 38px;
@@ -159,7 +160,16 @@ a {
   font-weight: 500;
   margin-top: 6px;
 }
-.footer-Rectangle .footer-Text .footer-nav h5 {
-  font-family: "indie flower";
+.footer-Rectangle .footer-Text .footer-Nav {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-Rectangle .footer-Text .footer-Nav a {
   color: black;
+}
+.footer-Rectangle .footer-Text .footer-Nav h5 {
+  font-family: "indie flower";
+  margin-bottom: 10px;
+  display: inline-block;
 }/*# sourceMappingURL=global.css.map */
