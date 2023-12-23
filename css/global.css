@@ -78,7 +78,6 @@ a {
   display: flex;
   align-items: center;
   margin: 0 15px 0 40px;
-  width: 187px;
   height: 60px;
 }
 .header-Rec .nav-Bar .logo .tbc-Logo {
@@ -99,11 +98,6 @@ a {
   width: 650px;
   justify-content: space-between;
 }
-.header-Rec .nav-Bar .nav-Search h2 {
-  font-size: 25px;
-  font-family: "indie flower";
-  color: gray;
-}
 .header-Rec .nav-Bar .nav-Search input {
   resize: none;
   height: 30px;
@@ -120,39 +114,55 @@ a {
 .header-Rec .nav-Bar .nav-Search .fa-magnifying-glass {
   color: gray;
 }
+.header-Rec .nav-Bar .nav-Search h2 {
+  font-size: 25px;
+  font-family: "indie flower";
+  color: gray;
+}
+.header-Rec .nav-Bar .nav-Search .solid-Bars {
+  width: 18px;
+  height: 21px;
+  margin: 10px;
+  display: none;
+}
 
 .footer-Rectangle {
   width: 100%;
-  height: 250px;
+  min-height: 250px;
   background-color: #e6f7e6;
 }
 .footer-Rectangle .footer-Text {
   padding: 20px 30px 0 30px;
 }
-.footer-Rectangle .footer-Text .footer-Logo {
+.footer-Rectangle .footer-Text .section1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-Rectangle .footer-Text .section1 .footer-Logo {
   display: flex;
   align-items: center;
   width: 200px;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100px;
+  height: 80px;
 }
-.footer-Rectangle .footer-Text .footer-Logo img {
+.footer-Rectangle .footer-Text .section1 .footer-Logo img {
   width: 38px;
   height: 30px;
 }
-.footer-Rectangle .footer-Text .footer-Logo .hl {
+.footer-Rectangle .footer-Text .section1 .footer-Logo .hl {
   width: 200px;
   height: 2px;
   margin-top: 4px;
   background-color: lightgray;
 }
-.footer-Rectangle .footer-Text .footer-Logo h3 {
+.footer-Rectangle .footer-Text .section1 .footer-Logo h3 {
   font-family: "indie flower";
   font-size: 23px;
   color: black;
 }
-.footer-Rectangle .footer-Text .footer-Logo h4 {
+.footer-Rectangle .footer-Text .section1 .footer-Logo h4 {
   font-family: "indie flower";
   font-size: 19px;
   word-spacing: -2px;
@@ -160,8 +170,29 @@ a {
   font-weight: 500;
   margin-top: 6px;
 }
+.footer-Rectangle .footer-Text .section1 .footer-Help-Contact {
+  margin: 0 10px 0 10px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-Rectangle .footer-Text .section1 .footer-Help-Contact h3 {
+  font-family: "indie flower";
+  font-size: 23px;
+}
+.footer-Rectangle .footer-Text .section1 .footer-Help-Contact .hl2 {
+  width: 100px;
+  height: 2px;
+  margin-top: 4px;
+  background-color: lightgray;
+}
+.footer-Rectangle .footer-Text .section1 .footer-Help-Contact h5 {
+  margin-top: 10px;
+}
+.footer-Rectangle .footer-Text .section1 .social-Platforms {
+  margin: 10px;
+}
 .footer-Rectangle .footer-Text .footer-Nav {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -169,7 +200,41 @@ a {
   color: black;
 }
 .footer-Rectangle .footer-Text .footer-Nav h5 {
-  font-family: "indie flower";
   margin-bottom: 10px;
-  display: inline-block;
+}
+
+@media only screen and (max-width: 850px) {
+  .header-Rec .nav-Bar .nav-Search {
+    justify-content: flex-end;
+  }
+  .header-Rec .nav-Bar .nav-Search .page-link {
+    display: none;
+  }
+  .header-Rec .nav-Bar .nav-Search .right-Icons {
+    display: none;
+  }
+  .header-Rec .nav-Bar .nav-Search .solid-Bars {
+    display: block;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header-Rec .nav-Bar .logo {
+    margin: 0 10px 0 15px;
+    width: auto;
+  }
+  .header-Rec .nav-Bar .logo h1 {
+    font-size: 25px;
+  }
+  .header-Rec .nav-Bar .nav-Search {
+    margin: 0 15px 0 10px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .header-Rec .nav-Bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header-Rec .nav-Bar .nav-Search {
+    width: auto;
+  }
 }/*# sourceMappingURL=global.css.map */
