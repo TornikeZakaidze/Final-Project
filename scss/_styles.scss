@@ -42,7 +42,7 @@
                 height: 30px;
                 border-radius: 10px;
                 width: 120px;
-                font-size: 20px;
+                font-size: 18px;
                 background-color: whitesmoke;
                 border: 2px solid lightgray;
             }
@@ -52,6 +52,7 @@
             }
             .fa-magnifying-glass {
                 color: $primary-color;
+                cursor: pointer;
             }
             h2 {
                 font-size: 25px;
@@ -62,12 +63,122 @@
                 width: 18px;
                 height: 21px;
                 margin: 10px;
+                cursor: pointer;
                 display: none;
             }
         }
         
     }
 }
+.b-Img {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 70px;
+    .big-Img1 {
+        width: 100%;
+        height: 66%;
+    }
+    h1 {
+        visibility: hidden;
+        position: absolute;
+        font-weight: 700;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include style1;
+        font-size: 40px;
+        transition: visibility 0.5s, opacity 0.5s linear
+    }
+    .b-p {
+        position: absolute;
+        font-size: 30px;
+        @include style1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+    }
+    .b-h4 {
+        top: 90%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        @include style1;
+    }
+}
+.b-Img:hover {
+    h1 {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.below-b-Img {
+    @include verticalCentered;
+    justify-content: center;
+    margin-bottom: 70px;
+    p {
+        margin: 0 10px 0 10px;
+        @include style1;
+        font-size: 24px;
+        color: $primary-color;
+        font-weight: 700;
+    }
+    .hl3 {
+        width: 30%;
+        height: 2px;
+        background-color: lightgray;
+    }
+}
+.card-Sec {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-bottom: 30px;
+    .card {
+        @include verticalCentered;
+        justify-content: center;
+        flex-direction: column;
+        .sell1 {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            border: 1px rgb(230, 224, 224) solid;
+            border-radius:5px ;
+            opacity: 0.7;
+        }
+        .sell1:hover {
+            opacity: 1;
+            zoom: 101%;
+        }
+        .n-p {
+            height: 25px;
+            width: auto;
+            background-color: rgb(233, 231, 231);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            h4 {
+                padding: 4px 5px 10px 5px ;
+            }
+        }
+        button {
+            @include style2;
+            margin-bottom: 10px;
+            opacity: 0.7;
+            border: none;
+            background-color: lightgrey;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        
+    }
+}
+
+
 .footer-Rectangle {
     width: 100%;
     min-height: 250px;
@@ -84,6 +195,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 height: 80px;
+                margin-right: 20px;
                 img {
                     width: 38px;
                     height: 30px;
@@ -109,41 +221,84 @@
                 }
             }
             .footer-Help-Contact {
-                margin: 0 10px 0 10px;
                 padding-top: 10px;
+                height: 117px;
                 display: flex;
                 flex-direction: column;
                 h3 {
-                        @include style1;
-                        font-size: 23px;
+                    @include style1;
+                    font-size: 23px;
                 }  
                 .hl2 {
-                        width: 100px;
-                        height: 2px;
-                        margin-top: 4px;
-                        background-color: lightgray;
+                    width: 100px;
+                    height: 2px;
+                    margin-top: 4px;
+                    background-color: lightgray;
                 } 
                 h5 {
-                        margin-top: 10px;
+                    margin-top: 10px;
                 }
             }
             .social-Platforms {
                 margin: 10px;
+                font-size: 22px;
+                a {
+                    color: $secondary-color;
+                }
             }
         }
-        .footer-Nav {
+        .nav-Report {
             display: flex;
-            flex-direction: column;
-            a {
-                color: $secondary-color;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            .footer-Nav {
+                display: flex;
+                flex-direction: column;
+                a {
+                    color: $secondary-color;
+                    margin-bottom: 10px;
+                }
             }
-            h5 {
-                margin-bottom: 10px;
+            .report {
+                bottom: 6px;
+                margin-top: 50px;
+                width: 274px;
+                input {
+                    border-radius: 10px;
+                    height: 30px;
+                    width: 200px;
+                    bottom: 0;
+                    border: 2px solid lightgray;
+                    font-size: 16px;
+                }
+                button {
+                    border-radius: 10px;
+                    width: 70px;
+                    height: 30px;
+                    border: 2px solid lightgray;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+                h6 {
+                    margin-top: 3px;
+                    @include style2;
+                    font-size: 14px;
+                    margin-left: 6px;
+                    color: $primary-color;
+                }
             }
-        }
-        
-    }
-
-
-
+            .contact {
+                margin-top: 40px;
+                .contact-i {
+                    display: flex;
+                    margin-top: 10px;
+                    i {
+                        margin-right: 4px;
+                    }
+                }
+            } 
+        }   
+    }                
 }
