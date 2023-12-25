@@ -118,7 +118,7 @@ a {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #e6f7e6;
+  background-color: white;
 }
 .header-Rec .nav-Bar {
   display: flex;
@@ -201,6 +201,15 @@ a {
   font-size: 40px;
   transition: visibility 0.5s, opacity 0.5s linear;
 }
+.b-Img h2 {
+  position: absolute;
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "indie flower";
+  font-size: 80px;
+}
 .b-Img .b-p {
   position: absolute;
   font-size: 30px;
@@ -227,6 +236,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 70px 0 70px 0;
 }
 .below-b-Img p {
@@ -240,6 +250,40 @@ a {
   width: 30%;
   height: 2px;
   background-color: lightgray;
+}
+
+.three-Ball {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+.three-Ball .ball-Text {
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.three-Ball .ball-Text .ball {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 190px;
+  background-color: #72828d;
+  border-radius: 50%;
+}
+.three-Ball .ball-Text .ball h2 {
+  font-family: "indie flower";
+  color: white;
+  font-size: 30px;
+}
+.three-Ball .ball-Text p {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Kameron", serif;
+  color: black;
 }
 
 .card-Sec {
@@ -289,6 +333,48 @@ a {
   opacity: 0.9;
 }
 
+.about-Us {
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+.about-Us img {
+  width: 100%;
+  height: 400px;
+}
+.about-Us .about-Text {
+  width: 50%;
+  height: 400px;
+  position: absolute;
+}
+.about-Us .about-Text .half-Rec {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  background-color: black;
+  opacity: 0.4;
+}
+.about-Us .about-Text h1 {
+  font-family: "indie flower";
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about-Us .about-Text p {
+  font-size: 19px;
+  font-family: "Kameron", serif;
+  color: white;
+  text-align: center;
+  width: 80%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .footer-Rectangle {
   width: 100%;
   min-height: 250px;
@@ -299,8 +385,8 @@ a {
 }
 .footer-Rectangle .footer-Text .section1 {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .footer-Rectangle .footer-Text .section1 .footer-Logo {
   display: flex;
@@ -362,8 +448,8 @@ a {
 }
 .footer-Rectangle .footer-Text .nav-Report {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 10px;
   margin-top: 20px;
 }
@@ -414,6 +500,11 @@ a {
   margin-right: 4px;
 }
 
+@media only screen and (max-width: 880px) {
+  .three-Ball {
+    justify-content: center;
+  }
+}
 @media only screen and (max-width: 850px) {
   .header-Rec .nav-Bar .nav-Search {
     justify-content: flex-end;
@@ -441,6 +532,15 @@ a {
   .b-Img .b-p {
     font-size: 25px;
   }
+  .three-Ball {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-Us .about-Text p {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 500px) {
   .header-Rec .nav-Bar .logo {
@@ -455,6 +555,12 @@ a {
   }
   .below-b-Img .hl3 {
     width: 20%;
+  }
+  .about-Us .about-Text h1 {
+    top: 15%;
+  }
+  .about-Us .about-Text p {
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 380px) {

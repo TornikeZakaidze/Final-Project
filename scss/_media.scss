@@ -1,3 +1,8 @@
+@media only screen and (max-width: 880px) {
+  .three-Ball {
+    justify-content: center;
+  }
+}
 @media only screen and (max-width: 850px) {
     .header-Rec {
       .nav-Bar {
@@ -33,6 +38,18 @@
         font-size: 25px;
       }
     }
+    .three-Ball {
+      flex-direction: column;
+      @include verticalCentered;
+      justify-content: center;
+    }
+    .about-Us {
+      .about-Text {
+        p {
+          width: 90%;
+        }
+      }
+    }
  }
 @media only screen and (max-width: 500px) {
     .header-Rec {
@@ -52,6 +69,16 @@
     .below-b-Img {
       .hl3 {
         width: 20%;
+      }
+    }
+    .about-Us {
+      .about-Text {
+        h1 {
+          top: 15%;
+        }
+        p {
+          font-size: 15px;
+        }
       }
     }
   }

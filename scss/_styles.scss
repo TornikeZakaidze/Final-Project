@@ -8,7 +8,7 @@
     height: 100px;
     width: 100%;
     @include verticalCentered;
-    background-color: #e6f7e6;
+    background-color: white;
     .nav-Bar {
         display:  flex;
         justify-content: space-between;
@@ -90,6 +90,15 @@
         font-size: 40px;
         transition: visibility 0.5s, opacity 0.5s linear
     }
+    h2 {
+        position: absolute;
+        font-weight: 700;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include style1;
+        font-size: 80px;
+    }
     .b-p {
         position: absolute;
         font-size: 30px;
@@ -116,6 +125,7 @@
 .below-b-Img {
     @include verticalCentered;
     justify-content: center;
+    text-align: center;
     padding: 70px 0 70px 0;
     p {
         margin: 0 10px 0 10px;
@@ -128,6 +138,37 @@
         width: 30%;
         height: 2px;
         background-color: lightgray;
+    }
+}
+.three-Ball {
+    display: flex;
+    @include wrap-spaceBetween;
+    padding: 20px;
+    .ball-Text {
+        max-width: 280px;
+        @include verticalCentered;
+        flex-direction: column;
+        padding: 20px;
+        .ball {
+            @include verticalCentered;
+            justify-content: center;
+            width: 190px;
+            height: 190px;
+            background-color: #72828d;
+            border-radius: 50%;
+            h2 {
+                @include style1;
+                color: white;
+                font-size: 30px;
+            }
+
+        }
+        p {
+            margin-top: 30px;
+            text-align: center;
+            @include style2;
+            color: $secondary-color;
+        }
     }
 }
 .card-Sec {
@@ -176,7 +217,47 @@
         
     }
 }
-
+.about-Us {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    img {
+        width: 100%;
+        height: 400px;
+    }
+    .about-Text {
+        width: 50%;
+        height: 400px;
+        position: absolute;
+        .half-Rec {
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            background-color: black;
+            opacity: 0.4;
+        }
+        h1 {
+            @include style1;
+            font-size: 30px;
+            color: $tertiary-color;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        p {
+            font-size: 19px;
+            @include style2;
+            color: $tertiary-color;
+            text-align: center;
+            width: 80%;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }  
+}
 
 .footer-Rectangle {
     width: 100%;
@@ -186,13 +267,11 @@
         padding: 20px 30px 0 30px;
         .section1 {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            @include wrap-spaceBetween;
             .footer-Logo {
                 @include verticalCentered;
                 width: 200px;
-                flex-wrap: wrap;
-                justify-content: center;
+                @include wrap-justifyCenter;
                 height: 80px;
                 margin-right: 20px;
                 img {
@@ -248,8 +327,7 @@
         }
         .nav-Report {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            @include wrap-spaceBetween;
             padding-bottom: 10px;
             margin-top: 20px;
             .footer-Nav {
