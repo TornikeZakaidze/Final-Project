@@ -177,43 +177,7 @@
     width: 75%;
     margin-bottom: 30px;
     .card {
-        @include verticalCentered;
-        justify-content: center;
-        flex-direction: column;
-        .sell1 {
-            width: 200px;
-            height: 200px;
-            margin-bottom: 20px;
-            border: 1px rgb(230, 224, 224) solid;
-            border-radius:5px ;
-            opacity: 0.8;
-        }
-        .sell1:hover {
-            opacity: 1;
-            zoom: 101%;
-        }
-        .n-p {
-            height: 25px;
-            width: auto;
-            background-color: rgb(233, 231, 231);
-            border-radius: 10px;
-            margin-bottom: 10px;
-            h4 {
-                padding: 4px 5px 10px 5px ;
-            }
-        }
-        button {
-            @include style2;
-            margin-bottom: 10px;
-            opacity: 0.7;
-            border: none;
-            background-color: lightgrey;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        button:hover {
-            opacity: 0.9;
-        }
+        @include for-Cards;
         
     }
 }
@@ -258,7 +222,89 @@
         }
     }  
 }
-
+.product-Rectangle {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #e6f7e6;
+    margin-bottom: 20px;
+    @include wrap-spaceBetween;
+    .product-Types {
+        width: 240px;
+        flex-direction: column;
+        padding: 30px;
+        margin: 0 auto;
+        h2 {
+            @include style1;
+            font-size: 23px;
+            padding-bottom: 5px
+        }    
+        .hl2 {
+            @include horizontalLine2;
+            margin-bottom: 5px;
+        }
+        div {
+            input[type="checkbox"] {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                vertical-align: middle;
+                border: 1px solid grey;
+                appearance: none;
+                -webkit-appearance: none;
+                outline: none;
+                cursor: pointer;
+                accent-color: $quaternary-color;
+            }
+            input[type="checkbox"]:checked {
+                appearance: auto;
+                clip-path: circle(46% at 50% 50%);
+            }
+        }
+    }
+    .product-Sumbit {
+        @include button1;
+        width: 80px;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        font-size: 20px;
+        margin: 0 20px 20px 0;
+    }
+}
+.sell-cards {
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+        @include for-Cards;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+.next-Cards {
+    display: flex;
+    max-width: 300px;
+    margin: 60px auto;
+    .page-Next {
+        width: 40px;
+        height: 40px;
+        border: 1px solid gray;
+        background-color: lightgray;
+        border-radius: 50%;
+        @include verticalCentered;
+        justify-content: center;
+        margin: 0 auto;
+        h2 {
+            @include style2;
+            font-size: 24px;
+            color: $tertiary-color;
+        }
+    }
+    .active {
+        background-color:  darkgray;
+    }
+}
 .footer-Rectangle {
     width: 100%;
     min-height: 250px;
@@ -279,10 +325,7 @@
                     height: 30px;
                 }
                 .hl {
-                    width: 200px;
-                    height: 2px;
-                    margin-top: 4px;
-                    background-color: lightgray;
+                    @include horizontalLine;
                 }
                 h3 {
                     @include style1;
@@ -308,10 +351,7 @@
                     font-size: 23px;
                 }  
                 .hl2 {
-                    width: 100px;
-                    height: 2px;
-                    margin-top: 4px;
-                    background-color: lightgray;
+                    @include horizontalLine2;
                 } 
                 h5 {
                     margin-top: 10px;
@@ -351,12 +391,9 @@
                     font-size: 16px;
                 }
                 button {
-                    border-radius: 10px;
-                    width: 70px;
-                    height: 30px;
-                    border: 2px solid lightgray;
+                    @include button1;
                     font-size: 16px;
-                    cursor: pointer;
+                    width: 70px;
                 }
                 h6 {
                     margin-top: 3px;
